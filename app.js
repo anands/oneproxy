@@ -48,6 +48,7 @@ function run(interceptors, app) {
         proxyRequest.host = app.PROXY_HOST;
         proxyRequest.port = app.PROXY_PORT;
         proxyRequest.path = proxyRequest.url;
+        proxyRequest.headers.host = proxyRequest.host;
 
         // check if there is any interceptor defined for the path:
         var interceptor = util.matchIntercept(interceptors, proxyRequest.path);

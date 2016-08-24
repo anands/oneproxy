@@ -1,0 +1,15 @@
+{
+    "name": "oneproxy",
+    "version": "0.0.1",
+    "description": "A Swiss Army Knife For HTTP Proxy",
+    "author": "Anand Sudhanaboina <anand@codehate.com> (codehate.com)",
+    "license": "MIT",
+    "repository": "https://github.com/codehate/oneproxy",
+    "dependencies": {
+        "http-proxy": "^1.14.0",
+        "jsdom": "^9.4.1"
+    },
+    "scripts": {
+        "start": "node app.js"
+    }
+}

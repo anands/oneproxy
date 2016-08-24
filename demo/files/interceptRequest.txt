@@ -1,0 +1,1 @@
+Request has been intercepted, this is the response from interceptRequest.txt

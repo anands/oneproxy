@@ -1,0 +1,34 @@
+{
+    "app": {
+        "PROXY_HOST": "127.0.0.1",
+        "PROXY_PORT": "3000",
+        "SERVER_PORT": 5050
+    },
+    "interceptors": [{
+        "url": "/injectScript",
+        "inject": true,
+        "script": "alert('Script injected from config.json');"
+    }, {
+        "url": "/injectScriptFromFile",
+        "inject": true,
+        "file": "./demo/files/injectJSFromFile.js"
+    }, {
+        "url": "/injectRaw",
+        "inject": true,
+        "raw": true,
+        "data": "<h1>This is injected from config.json</h1>"
+    }, {
+        "url": "/injectRawFile",
+        "inject": true,
+        "raw": true,
+        "file": "./demo/files/injectRawFile.html"
+    }, {
+        "url": "/interceptRequest",
+        "replace": true,
+        "data": "Request has been intercepted, this is the response from config.json"
+    }, {
+        "url": "/interceptRequestFromFile",
+        "replace": true,
+        "file": "./demo/files/interceptRequest.txt"
+    }]
+}

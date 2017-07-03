@@ -59,6 +59,12 @@ function run(interceptors, app) {
             }
         }
 
+        if(!proxyRequest.host || !proxyRequest.port){
+            response.statusCode = 404;
+            response.end("Unable to process. Proxy HOST or PORT missing. Interceptor not configured for the path.");
+            return;
+        }
+
         // Create a proxy request:
         var proxyRequestHandler = http.request(proxyRequest, function(proxyResponse) {
             if (interceptor && interceptor.inject) {
